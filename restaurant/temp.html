@@ -19,7 +19,7 @@
 
 <div data-role="page" id="home" data-theme="c">
 
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>Resteraunt</h1>
 	</div><!-- /header -->
 
@@ -49,54 +49,55 @@
 
 		<div class="choice_list" id="seat"> 
 		<h1> Please be seated at the available table </h1>		
-		<ul data-role="listview" data-inset="true" data-theme="b">
-		<li><a href="#dish" data-transition="slidedown">Table 1 <span class="ui-li-count" > 3 </span></a> </li>
-		<li><a href="#dish" data-transition="slidedown">Table 2 <span class="ui-li-count" > 8 </span></a> </li>
-		<li><a href="#dish" data-transition="slidedown">Table 3 <span class="ui-li-count" > 5 </span></a> </li>
-		</ul>
 		</div>
+
+		<div><table>
+		<tr>
+		<td ><img src="table.jpg" style="opacity:0.2"/> </td>
+		<td ><img src="table.jpg" style="opacity:0.2"/> </td>
+		<td ><img src="table.jpg" style="opacity:0.2"/> </td>
+		<td ><img src="table.jpg" /> </td>
+		</tr>
+		<tr>
+		<td ><img src="table.jpg" /> </td>
+		<td ><img src="table.jpg" style="opacity:0.2"/> </td>
+		<td ><img src="table.jpg" /> </td>
+		<td ><img src="table.jpg" style="opacity:0.2"/> </td>
+		</tr>
+		</table></div>
 
 		<div class="choice_list" id="dish"> 
 		<h1> What would you'd like to eat? </h1>
 
+		<table>
+			<tr>
+    	<td width="160">
+    		<ul data-role="listview" data-inset="false" >
+            <li><div data-role="controlgroup" data-type="horizontal" >
+			<a href="#" data-role="button" data-icon="plus" data-iconpos="notext">Up</a>
+			<a href="#" data-role="button" data-icon="minus" data-iconpos="notext">Down</a>
+			</div> </li>
+                <li><div data-role="controlgroup" data-type="horizontal" >
+			<a href="#" data-role="button" data-icon="plus" data-iconpos="notext">Up</a>
+			<a href="#" data-role="button" data-icon="minus" data-iconpos="notext">Down</a>
+			</div> </li>              
+            </ul>
+    	</td>
+
+				<td width="240">
 	    <fieldset data-role="controlgroup" data-type="vertical">
-            <input name="dish1" id="dish1" type="checkbox">
-            <label for="dish1">
             	<ul data-role="listview" data-inset="false" >
-                <li><img src="sushis.jpg"/> <h3> Some Sushis  $7.99</h3></li>
+                <li><img src="sushis.jpg"/> <h3>  Sushis  $7.99</h3><span class="ui-li-count" id="quantity1" > 0 </span></li>
             </ul>
-            </label>
-            <input name="dish2" id="dish2" type="checkbox">
-            <label for="dish2">
             	<ul data-role="listview" data-inset="false" >
-                <li><img src="pizza.jpg"/> <h3> Pizza $6.99</h3></li>
+                <li><img src="pizza.jpg"/> <h3> Pizza $6.99</h3><span class="ui-li-count" id="quantity2" > 0 </span></li>
             </ul>
-            </label>
-            <input name="dish3" id="dish3" type="checkbox">
-            <label for="dish3">
-            	<ul data-role="listview" data-inset="false" >
-                <li><img src="nems.jpg"/> <h3> Rolls $9.99</h3></li>
-            </ul>
-            </label>    
-            <input name="dish4" id="dish4" type="checkbox">
-            <label for="dish4">
-            	<ul data-role="listview" data-inset="false" >
-                <li><img src="kebap.jpg"/> <h3> Kebap $5.99</h3></li>
-            </ul>
-            </label>
-            <input name="dish5" id="dish5" type="checkbox">
-            <label for="dish5">
-            	<ul data-role="listview" data-inset="false" >
-                <li><img src="burger.jpg"/> <h3> Burger $4.99</h3></li>
-            </ul>
-            </label>
-            <input name="dish6" id="dish6" type="checkbox">
-            <label for="dish6">
-            	<ul data-role="listview" data-inset="false" >
-                <li><img src="tradi.jpg"/> <h3> Beef $12.99</h3></li>
-            </ul>
-            </label>                      
+                     
         </fieldset>
+    	</td>
+
+    </tr>
+</table>
 		</div>
 
 
@@ -132,9 +133,16 @@
 	
 	</div><!-- /content -->
 
-	<div data-role="footer">
-		<h4>Welcome</h4>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" data-theme="e" >
+			<ul>
+				<li><a href="#" data-icon="check" data-iconpos="top" data-theme="b">People</a></li>
+				<li><a href="#" data-icon="star" class="ui-btn-active" data-iconpos="top" data-theme="b">Menu</a></li>
+				<li><a href="#" data-icon="grid" data-iconpos="top" data-theme="b">Cart</a></li>
+			</ul>
+		</div><!-- /navbar -->
 	</div><!-- /footer -->
+
 </div><!-- /page -->
 
 </body>
